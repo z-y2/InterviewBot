@@ -1,7 +1,8 @@
-"""project URL Configuration
+"""
+URL configuration for backend project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/4.1/topics/http/urls/
+    https://docs.djangoproject.com/en/4.2/topics/http/urls/
 Examples:
 Function views
     1. Add an import:  from my_app import views
@@ -15,15 +16,26 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+<<<<<<< HEAD:project/project/urls.py
 from django.urls import re_path as url
+=======
+>>>>>>> yay:backend/backend/urls.py
 from app import views
 from rest_framework import routers
 
 router = routers.DefaultRouter()
+<<<<<<< HEAD:project/project/urls.py
 router.register(r'humans', views.ReactView, 'people')
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path('api/', include(router.urls)),
     #path("", TestView.as_view(), name="keonte")
+=======
+router.register(r'tasks', views.TodoView, 'tasks')
+
+urlpatterns = [
+    path("admin/", admin.site.urls),
+    path('api/', include(router.urls))
+>>>>>>> yay:backend/backend/urls.py
 ]
