@@ -15,10 +15,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from django.conf.urls import url 
-from app.views import *
+from django.urls import re_path as url
+from app import views
+from rest_framework import routers
+
+router = routers.DefaultRouter()
+router.register(r'humans', views.ReactView, 'people')
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path('', ReactView.as_view(), name="anything")
+    path('api/', include(router.urls)),
+    #path("", TestView.as_view(), name="keonte")
 ]
