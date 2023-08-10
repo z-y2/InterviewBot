@@ -1,0 +1,1 @@
+GPT_KEY = "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"
