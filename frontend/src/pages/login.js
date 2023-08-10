@@ -145,16 +145,16 @@ class Login extends Component {
   render() {
     return (
       <main className="content">
-        <h1 className="text-black text-uppercase text-center my-4">REGISTRATION PAGE</h1>
+        <h1 className="text-black text-uppercase text-center my-4">LOGIN PAGE</h1>
         <div className="row ">
           <div className="col-md-6 col-sm-10 mx-auto p-0">
             <div className="card p-3">
-              <div className="">
+              <div className="text-center">
                 <button onClick={this.createItem} className="btn btn-primary">
                   Log In
                     </button>
               </div>
-              {this.renderTabList()}
+              {/* {this.renderTabList()} */}
               <ul className="list-group list-group-flush">
                 {this.renderItems()}
               </ul>
@@ -162,13 +162,16 @@ class Login extends Component {
           </div>
         </div>
 
-        <Link to="/register" className="btn btn-secondary mr-2">
-          Go to Register
-        </Link>
+        <div className="text-center">
+          <Link to="/register" className="btn btn-secondary mr-4">
+            Go to Register
+          </Link>
 
-        <Link to="/chat" className="btn btn-secondary mr-2">
-          Go to chat
-        </Link>
+          <Link to="/chat" className="btn btn-secondary mr-4">
+            Go to Chat
+          </Link>
+        </div>
+
 
         {this.state.modal ? (
           <Modal

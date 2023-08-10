@@ -150,12 +150,12 @@ class Register extends Component {
         <div className="row ">
           <div className="col-md-6 col-sm-10 mx-auto p-0">
             <div className="card p-3">
-              <div className="">
+              <div className="text-center">
                 <button onClick={this.createItem} className="btn btn-primary">
                   Register
                     </button>
               </div>
-              {this.renderTabList()}
+              {/* {this.renderTabList()} */}
               <ul className="list-group list-group-flush">
                 {this.renderItems()}
               </ul>
@@ -163,13 +163,17 @@ class Register extends Component {
           </div>
         </div>
 
-        <Link to="/login" className="btn btn-secondary mr-2">
-          Go to Login
-        </Link>
 
-        <Link to="/chat" className="btn btn-secondary mr-2">
-          Go to chat
-        </Link>
+        <div className="text-center">
+          <Link to="/login" className="btn btn-secondary mr-2">
+            Go to Login
+          </Link>
+
+          <Link to="/chat" className="btn btn-secondary mr-2">
+            Go to Chat
+          </Link>
+            
+        </div>
 
         {this.state.modal ? (
           <Modal

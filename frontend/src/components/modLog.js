@@ -35,7 +35,7 @@ class CustomModal extends Component {
     const { toggle, onSave } = this.props;
     return (
       <Modal isOpen={true} toggle={toggle}>
-        <ModalHeader toggle={toggle}> LogIn to Existing Account </ModalHeader>
+        <ModalHeader toggle={toggle}> Log In to Existing Account </ModalHeader>
         <ModalBody>
         
           <Form>

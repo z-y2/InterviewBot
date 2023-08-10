@@ -149,12 +149,12 @@ class Chat extends Component {
         <div className="row ">
           <div className="col-md-6 col-sm-10 mx-auto p-0">
             <div className="card p-3">
-              <div className="">
+              <div className="text-center">
                 <button onClick={this.createItem} className="btn btn-primary">
                   Chat
                     </button>
               </div>
-              {this.renderTabList()}
+              {/* {this.renderTabList()} */}
               <ul className="list-group list-group-flush">
                 {this.renderItems()}
               </ul>
@@ -162,13 +162,16 @@ class Chat extends Component {
           </div>
         </div>
 
-        <Link to="/login" className="btn btn-secondary mr-2">
-          Go to Login
-        </Link>
+        <div className="text-center">
+          <Link to="/login" className="btn btn-secondary mr-2">
+            Go to Login
+          </Link>
 
-        <Link to="/register" className="btn btn-secondary mr-2">
-          Go to Register
-        </Link>
+          <Link to="/register" className="btn btn-secondary mr-2">
+            Go to Register
+          </Link>
+        </div>
+
 
         {this.state.modal ? (
           <Modal
