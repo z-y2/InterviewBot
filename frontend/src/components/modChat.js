@@ -35,55 +35,43 @@ class CustomModal extends Component {
     const { toggle, onSave } = this.props;
     return (
       <Modal isOpen={true} toggle={toggle}>
-        <ModalHeader toggle={toggle}> Task Item </ModalHeader>
+        <ModalHeader toggle={toggle}> Start Chatting </ModalHeader>
         <ModalBody>
         
           <Form>
 
-            {/* 3 formgroups
-            1 title label */}
+
+            {/* 4 username input */}
             <FormGroup>
-              <Label for="title">Title</Label>
+              <Label for="input">Input</Label>
               <Input
                 type="text"
-                name="title"
-                value={this.state.activeItem.title}
+                name="input"
+                value={this.state.activeItem.input}
                 onChange={this.handleChange}
-                placeholder="Enter Task Title"
+                placeholder="Enter Question"
               />
             </FormGroup>
 
-            {/* 2 description label */}
+            {/* 5 password input */}
             <FormGroup>
-              <Label for="description">Description</Label>
+              <Label for="output">Output</Label>
               <Input
                 type="text"
-                name="description"
-                value={this.state.activeItem.description}
-                onChange={this.handleChange}
-                placeholder="Enter Task Description"
+                name="output"
+                value={this.state.activeItem.output}
+                // onChange={this.handleChange}
+                // placeholder="Enter Password"
               />
             </FormGroup>
 
-            {/* 3 completed label */}
-            <FormGroup check>
-              <Label for="completed">
-                <Input
-                  type="checkbox"
-                  name="completed"
-                  checked={this.state.activeItem.completed}
-                  onChange={this.handleChange}
-                />
-                Completed
-              </Label>
-            </FormGroup>
 
           </Form>
         </ModalBody>
         {/* create a modal footer */}
         <ModalFooter>
           <Button color="success" onClick={() => onSave(this.state.activeItem)}>
-            Save
+            Enter
           </Button>
         </ModalFooter>
       </Modal>
